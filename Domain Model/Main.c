@@ -20,7 +20,9 @@ int main(int arc, char* argv[]){
 
     Planet *Planet_tab;
     Planet_tab = ReadPlanetDataCartesian("/home/szym/Pulpit/grawitacja/grawitex/data.in");
-
+    for(int  i = 0; i < 10; i++){
+		printf("%s \n",Planet_tab[i].name);
+	}
     //char *in_file = "/home/szym/Pulpit/grawitacja/grawitex/data.in";
 
     //wczytaj_shit(in_file);

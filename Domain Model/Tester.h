@@ -9,13 +9,14 @@
 #include "MathFunctions.h"
 #include "Collider.h"
 
+/*  TO JEST Z EA. Prawdopodobnie do wywalenia
 DataParser *m_DataParser;
 Symulator *m_Symulator;
 SimOuPresenter *m_SimOuPresenter;
 MathFunctions *m_MathFunctions;
 Collider *m_Collider;
 SimOutPresenter *m_SimOutPresenter;
+*/
 
 
-
-#endif _TESTER_H_
+#endif 

@@ -2,34 +2,26 @@
 #ifndef _DATATYPEOBJECTS_H_
 #define _DATATYPEOBJECTS_H_
 
-#include "DataParser.h"
-#include "Main.h"
-#include "MathFunctions.h"
 
-
-typedef struct Place{
+typedef struct Place_t{
 double x, y, z;
-}
+}Place;
 
- typedef struct Velocity{
+ typedef struct Velocity_t{
 double vx, vy, vz;
-}
-typedef struct Planet{
-char* Name;
+}Velocity;
+
+typedef struct Planet_t{
+char* name;
 double mass;
-place* coords;
-velocity* velocity;
-}
+Place* coords;
+Velocity* velocity;
+}Planet;
 
+extern const float TimeStep;
 
-float GravConst;
-float TimeStep;
-DataParser *m_DataParser;
-Main *m_Main;
-MathFunctions *m_MathFunctions;
+//extern const int PLANET_LIMIT = 1000;
+extern const float GravConst;
 
-
-
-
-#endif _DATATYPEOBJECTS_H_
+#endif
 

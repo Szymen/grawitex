@@ -8,4 +8,4 @@ void CollideAndFracture(Planet* PlanetsTable, int PlanetAindex, int PlanetBindex
 void GlueUp(Planet* PlanetTable, int PlanetAindex, int PlanetBindex);
 
 
-#endif _COLLIDER_H_
+#endif

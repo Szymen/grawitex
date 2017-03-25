@@ -16,4 +16,4 @@ void EvalVelocity(Planet* A, Planet* B);
 
 
 
-#endif _MATHFUNCTIONS_H_
+#endif 

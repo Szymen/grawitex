@@ -15,4 +15,4 @@ SimOutPresenter *m_SimOutPresenter;
 void Simulate(Planet* PlanetsTable, int OutType, char* OutFileName);
 
 
-#endif _SYMULATOR_H_
+#endif 

@@ -22,4 +22,4 @@ void WriteGnuplot(char* OutFileName, Planets* PlanetsTable);
 
 
 
-#endif _SYMOUTPRESENTER_H_
+#endif

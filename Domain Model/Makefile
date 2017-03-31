@@ -6,4 +6,7 @@ grawitex: DataParser.o
 
 DataParser.o:
 	$(CC) -o DataParser.o -c DataParser.c
-  
+
+.PHONY: clean
+clean:
+	rm -rf *.o

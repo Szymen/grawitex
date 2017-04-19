@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1489446224 source:/home/szym/Pulpit/grawitacja/grawitex/main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-

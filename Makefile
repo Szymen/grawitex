@@ -1,12 +1,27 @@
-CC=gcc
-CFLAGS=-I.
+CC = gcc
+CFLAGS = -I.
+EXEC = bin/grawitex
 
-grawitex: DataParser.o 
-	$(CC) Main.c DataParser.o -I. -o grawitex
+vpath %.c src
+vpath %.h src
+vpath %.o bin
+vpath % bin
 
-DataParser.o:
-	$(CC) -o DataParser.o -c DataParser.c
+SOURCES := $(wildcard src/*.c)
+OBJECTS := $(patsubst src/%.c,bin/%.o,$(SOURCES))
 
-.PHONY: clean
+all: $(EXEC)
+
+$(EXEC): $(OBJECTS)
+	echo "Sources: $(SOURCES)"
+	$(CC) $(OBJECTS) $(CFLAGS) -o $(EXEC)
+
+$(OBJECTS): bin/%.o : src/%.c
+	$(CC) -o $@ $(CFLAGS) -c $<
+
+.PHONY: clean run
 clean:
-	rm -rf *.o
+	rm -rf bin/*
+
+run: $(EXEC)
+	$(EXEC)

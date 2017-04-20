@@ -7,7 +7,7 @@
 
 #include "SimOuPresenter.h"
 
-void WriteByStep(char* OutFileName, Planets* PlanetsTable)
+void WriteByStep(char* OutFileName, Planet* PlanetsTable)
 {
 	
 }
@@ -17,24 +17,7 @@ void WriteCartesian(char* OutFileName, Planet* PlanetsTable)
 	
 }
 
-void WriteGnuplot(char* OutFileName, Planets* PlanetsTable)
-{
-	
-} 
-
-
-
-void WriteByStep(char* OutFileName, Planets* PlanetsTable)
-{
-	
-}
-
-void WriteCartesian(char* OutFileName, Planet* PlanetsTable)
-{
-	
-}
-
-void WriteGnuplot(char* OutFileName, Planets* PlanetsTable)
+void WriteGnuplot(char* OutFileName, Planet* PlanetsTable)
 {
 	
 } 

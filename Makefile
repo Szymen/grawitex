@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -I.
+CFLAGS = -Wall -I src -g
 EXEC = bin/grawitex
 
 vpath %.c src
@@ -13,7 +13,6 @@ OBJECTS := $(patsubst src/%.c,bin/%.o,$(SOURCES))
 all: $(EXEC)
 
 $(EXEC): $(OBJECTS)
-	echo "Sources: $(SOURCES)"
 	$(CC) $(OBJECTS) $(CFLAGS) -o $(EXEC)
 
 $(OBJECTS): bin/%.o : src/%.c

@@ -21,8 +21,8 @@ int main(int arc, char* argv[]){
     Planet *Planet_tab;
     
     Planet_tab = ReadPlanetDataCartesian("data/all_planets.in");
-    
-    for(int  i = 0; i < 207; i++){
+    int i; 
+    for( i = 0; i < 207; i++){
 		printf(
 			"Planet_tab[%d] %s\t%g %g %g %g %g %g %g\n",
 			i,

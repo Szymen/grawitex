@@ -49,8 +49,8 @@ Planet* ReadPlanetDataCartesian(const char* InFileName)
 		}
 		//printf("B\n");
 		Planet_tab[i].name = malloc(sizeof(char) * 40 );
-		Planet_tab[i].coords = malloc(sizeof(Place));
-		Planet_tab[i].velocity = malloc(sizeof(Velocity));
+		Planet_tab[i].coords = malloc(sizeof(Vector));
+		Planet_tab[i].velocity = malloc(sizeof(Vector));
 		
 		name[strlen(name)-1]=0; /* deleting newline at the end */
 		
@@ -59,9 +59,9 @@ Planet* ReadPlanetDataCartesian(const char* InFileName)
 		Planet_tab[i].coords->x=x;
 		Planet_tab[i].coords->y=y;
 		Planet_tab[i].coords->z=z;
-		Planet_tab[i].velocity->vx=vx;
-		Planet_tab[i].velocity->vy=vy;
-		Planet_tab[i].velocity->vz=vz;
+		Planet_tab[i].velocity->x=vx;
+		Planet_tab[i].velocity->y=vy;
+		Planet_tab[i].velocity->z=vz;
 	
 		i++;
 		

@@ -1,19 +1,15 @@
 #ifndef _DATATYPEOBJECTS_H_
 #define _DATATYPEOBJECTS_H_
 
-typedef struct Place_t {
+typedef struct Vector_t {
 	double x, y, z;
-} Place;
-
-typedef struct Velocity_t {
-	double vx, vy, vz;
-} Velocity;
+} Vector;
 
 typedef struct Planet_t {
 	char* name;
 	double mass;
-	Place* coords;
-	Velocity* velocity;
+	Vector* coords;
+	Vector* velocity;
 } Planet;
 
 extern const float TimeStep;

@@ -9,7 +9,7 @@
 
 #include "DataParser.h"
 #include "DataTypeObjects.h"
-
+#include "Symulator.h"
 
 
 
@@ -19,9 +19,9 @@ int main(int arc, char* argv[]){
     //printf("Hello world!\n");
 
     Planet *Planet_tab;
-    
-    Planet_tab = ReadPlanetDataCartesian("data/all_planets.in");
-    int i; 
+    int planet_count;
+    planet_count = ReadPlanetDataCartesian("data/all_planets.in",Planet_tab);
+/*    int i; 
     for( i = 0; i < 207; i++){
 		printf(
 			"Planet_tab[%d] %s\t%g %g %g %g %g %g %g\n",
@@ -31,15 +31,13 @@ int main(int arc, char* argv[]){
 			Planet_tab[i].coords->x,
 			Planet_tab[i].coords->y,
 			Planet_tab[i].coords->z,
-			Planet_tab[i].velocity->vx,
-			Planet_tab[i].velocity->vy,
-			Planet_tab[i].velocity->vz
+			Planet_tab[i].velocity->x,
+			Planet_tab[i].velocity->y,
+			Planet_tab[i].velocity->z
 		);
-    }
-    //char *in_file = "/home/szym/Pulpit/grawitacja/grawitex/data.in";
-
-    //wczytaj_shit(in_file);
-
+    } */
+    char* OutFileName = "PlikWyjsciowy.out";
+    Simulate( Planet_tab, planet_count ,1 , OutFileName);
 
 
 

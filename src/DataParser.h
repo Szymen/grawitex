@@ -6,6 +6,6 @@
 
 
 
-Planet* ReadPlanetDataCartesian(const char* InFileName);
+int ReadPlanetDataCartesian(const char* InFileName, Planet* );
 
 #endif

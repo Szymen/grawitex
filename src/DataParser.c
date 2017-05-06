@@ -14,8 +14,7 @@
 #define BUFF_SIZE 40 //1024
 #define PLANET_LIMIT 1000
 
-Planet* ReadPlanetDataCartesian(const char* InFileName)
-{
+int ReadPlanetDataCartesian(const char* InFileName, Planet* tab){
 
 	char name[BUFF_SIZE];
 	int i;
@@ -24,8 +23,7 @@ Planet* ReadPlanetDataCartesian(const char* InFileName)
 
 	f_in = fopen(InFileName,"r");
 	/* printf("Poprawnie otwarto plik: %s\n",InFileName); */
-
-	Planet* Planet_tab = malloc(sizeof(Planet) * PLANET_LIMIT);
+	tab = malloc(sizeof(Planet) * PLANET_LIMIT); /* TODO pointer checking if null or not etc. */
 /*	Planet tmp;
 	tmp.coords = malloc(sizeof(Place));
 	tmp.name = malloc(sizeof(char) * 40 );
@@ -45,23 +43,23 @@ Planet* ReadPlanetDataCartesian(const char* InFileName)
 	  
 		if(i == PLANET_LIMIT){
 			printf("ZA DUŻO PLANET!\n");
-			return NULL;
+			return -1;
 		}
 		//printf("B\n");
-		Planet_tab[i].name = malloc(sizeof(char) * 40 );
-		Planet_tab[i].coords = malloc(sizeof(Vector));
-		Planet_tab[i].velocity = malloc(sizeof(Vector));
+		tab[i].name = malloc(sizeof(char) * 40 );
+		tab[i].coords = malloc(sizeof(Vector));
+		tab[i].velocity = malloc(sizeof(Vector));
 		
 		name[strlen(name)-1]=0; /* deleting newline at the end */
 		
-		strcpy(Planet_tab[i].name,name);
-		Planet_tab[i].mass = mass;
-		Planet_tab[i].coords->x=x;
-		Planet_tab[i].coords->y=y;
-		Planet_tab[i].coords->z=z;
-		Planet_tab[i].velocity->x=vx;
-		Planet_tab[i].velocity->y=vy;
-		Planet_tab[i].velocity->z=vz;
+		strcpy(tab[i].name,name);
+		tab[i].mass = mass;
+		tab[i].coords->x=x;
+		tab[i].coords->y=y;
+		tab[i].coords->z=z;
+		tab[i].velocity->x=vx;
+		tab[i].velocity->y=vy;
+		tab[i].velocity->z=vz;
 	
 		i++;
 		
@@ -75,6 +73,6 @@ Planet* ReadPlanetDataCartesian(const char* InFileName)
 
 
 
-	return  Planet_tab;
+	return i;
 }
 

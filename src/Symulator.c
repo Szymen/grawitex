@@ -4,11 +4,14 @@
  *  Implementation of the Class Symulator       
  *  Original author: szym                     
  ****************************************************/
+#include <stdio.h>
 
 #include "Symulator.h"
 
-void Simulate(Planet* PlanetsTable, int OutType, char* OutFileName)
-{
-	
+void Simulate(Planet* PlanetsTable,int planetCount,  int OutType, char* OutFileName){
+
+	printf("Zaczynamy symulacje typ %d, wypisujemy do %s.\n", OutType, OutFileName);
+
+	printf("Planet jest: %d\n", planetCount);
 } 
 

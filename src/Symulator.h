@@ -4,6 +4,7 @@
 #include "SimOuPresenter.h"
 #include "Collider.h"
 
-void Simulate(Planet* PlanetsTable, int OutType, char* OutFileName);
+
+void Simulate(Planet* PlanetsTable, int planetCount, int OutType, char* OutFileName);
 
 #endif 

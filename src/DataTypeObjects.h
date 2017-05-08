@@ -10,6 +10,7 @@ typedef struct Planet_t {
 	double mass;
 	Vector* coords;
 	Vector* velocity;
+	Vector* tmp_a;
 } Planet;
 
 extern const float TimeStep;

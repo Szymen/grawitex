@@ -3,8 +3,9 @@
 
 #include "Symulator.h"
 #include "Collider.h"
+#include "DataTypeObjects.h"
 
-void CalcNewPosition(Planet* Planet);
-void EvalVelocity(Planet* A, Planet* B);
+void actualisePos(Planet* Planet, double dt);
+void calcGrav(Planet* A, Planet* B);
 
 #endif 

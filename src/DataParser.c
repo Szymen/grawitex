@@ -49,7 +49,12 @@ int ReadPlanetDataCartesian(const char* InFileName, Planet* tab){
 		tab[i].name = malloc(sizeof(char) * 40 );
 		tab[i].coords = malloc(sizeof(Vector));
 		tab[i].velocity = malloc(sizeof(Vector));
-		
+		tab[i].tmp_a = malloc(sizeof(Vector));
+
+		tab[i].tmp_a->x = 0;	
+		tab[i].tmp_a->y = 0;	
+		tab[i].tmp_a->z = 0;	
+	
 		name[strlen(name)-1]=0; /* deleting newline at the end */
 		
 		strcpy(tab[i].name,name);

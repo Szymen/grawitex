@@ -37,7 +37,7 @@ int main(int arc, char* argv[]){
 		);
     } */
     char* OutFileName = "PlikWyjsciowy.out";
-    Simulate( Planet_tab, planet_count ,1 , OutFileName);
+    Simulate( Planet_tab, planet_count,1000,2 ,1 , OutFileName);
 
 
 

@@ -5,6 +5,6 @@
 #include "Collider.h"
 
 
-void Simulate(Planet* PlanetsTable, int planetCount, int OutType, char* OutFileName);
+void Simulate(Planet* PlanetsTable, int planetCount, double simLength, double timeStep  ,int OutType, char* OutFileName);
 
 #endif 

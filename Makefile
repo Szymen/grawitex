@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -I src -g
+CFLAGS = -Wall -I src -g -lm
 EXEC = bin/grawitex
 
 vpath %.c src

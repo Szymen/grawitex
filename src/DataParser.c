@@ -18,7 +18,7 @@ int ReadPlanetDataCartesian(const char* InFileName, Planet* tab){
 
 	char name[BUFF_SIZE];
 	int i;
-	float x,y,z,vx,vy,vz, mass;
+	double x,y,z,vx,vy,vz, mass;
 	FILE *f_in;
 
 	f_in = fopen(InFileName,"r");
@@ -35,7 +35,7 @@ int ReadPlanetDataCartesian(const char* InFileName, Planet* tab){
 	
 	while( fgets(name, BUFF_SIZE, f_in) != NULL &&   
 		fscanf(
-			f_in, "%f %f %f %f %f %f %f ",
+			f_in, "%lf %lf %lf %lf %lf %lf %lf ",
 			&mass,
 			&x, &y, &z,
 			&vx, &vy, &vz) == 7 ) {

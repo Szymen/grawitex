@@ -17,8 +17,25 @@ void Simulate(Planet* PlanetsTable, int planetCount, double simLength, double ti
 	int iteration, i, j;
 	iteration = 0;
 	//printf("Dupa\n");
+	Planet* Planet_tab = PlanetsTable;
+int k;
 	while(iteration*timeStep < simLength){
+printf("\n");
 
+    for( k = 0; k < 3; k++){
+		printf(
+			"Planet_tab[%d] %s\t masa:%g x:%g y:%g z:%g vx:%g vy:%g vz:%g\n",
+			k,
+			Planet_tab[k].name,
+			Planet_tab[k].mass,
+			Planet_tab[k].coords->x,
+			Planet_tab[k].coords->y,
+			Planet_tab[k].coords->z,
+			Planet_tab[k].velocity->x,
+			Planet_tab[k].velocity->y,
+			Planet_tab[k].velocity->z
+		);
+    }
 		//printf("A\n");
 		for(i = 0; i<planetCount; i++){
 			//printf("B\n");

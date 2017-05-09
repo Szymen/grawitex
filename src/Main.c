@@ -6,7 +6,7 @@
  ****************************************************/
 
 #include <stdio.h>
-
+#include <stdlib.h>
 #include "DataParser.h"
 #include "DataTypeObjects.h"
 #include "Symulator.h"
@@ -22,10 +22,10 @@ int main(int arc, char* argv[]){
     Planet_tab = malloc(sizeof(Planet) * PLANET_LIMIT);
     int planet_count;
     printf("Czytamy!\n");
-    planet_count = ReadPlanetDataCartesian("data/all_planets.in",Planet_tab);
+    planet_count = ReadPlanetDataCartesian("data/small_data.in",Planet_tab);
     int i; 
 
-    for( i = 0; i < 5; i++){
+    for( i = 0; i < 3; i++){
 		printf("Planet_tab[%d] %s\t masa:%g x:%g y:%g z:%g vx:%g vy:%g vz:%g\n",
 			i,
 			Planet_tab[i].name,
@@ -39,23 +39,9 @@ int main(int arc, char* argv[]){
 		);
     }
     char* OutFileName = "PlikWyjsciowy.out";
-    printf("Test: %s\n", Planet_tab[3].name);
-    Simulate( Planet_tab, planet_count,1000,2 ,1 , OutFileName);
+    //printf("Test: %s\n", Planet_tab[3].name);
+    Simulate( Planet_tab, planet_count, 2, 1 ,1 , OutFileName);
 
-    for( i = 0; i < 5; i++){
-		printf(
-			"Planet_tab[%d] %s\t masa:%g x:%g y:%g z:%g vx:%g vy:%g vz:%g\n",
-			i,
-			Planet_tab[i].name,
-			Planet_tab[i].mass,
-			Planet_tab[i].coords->x,
-			Planet_tab[i].coords->y,
-			Planet_tab[i].coords->z,
-			Planet_tab[i].velocity->x,
-			Planet_tab[i].velocity->y,
-			Planet_tab[i].velocity->z
-		);
-    }
 
 
 

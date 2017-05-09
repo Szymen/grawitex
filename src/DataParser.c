@@ -23,7 +23,7 @@ int ReadPlanetDataCartesian(const char* InFileName, Planet* tab){
 
 	f_in = fopen(InFileName,"r");
 	/* printf("Poprawnie otwarto plik: %s\n",InFileName); */
-	tab = malloc(sizeof(Planet) * PLANET_LIMIT); /* TODO pointer checking if null or not etc. */
+	if( tab == NULL){printf("COS Z PAMIECIA! NIE MOGE WCZYTAC!\n"); return -2;}
 /*	Planet tmp;
 	tmp.coords = malloc(sizeof(Place));
 	tmp.name = malloc(sizeof(char) * 40 );

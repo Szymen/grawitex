@@ -16,17 +16,16 @@ void Simulate(Planet* PlanetsTable, int planetCount, double simLength, double ti
 	printf("Dlugosc symulacji %lf z krokiem %lf\n", simLength, timeStep);
 	int iteration, i, j;
 	iteration = 0;
-	printf("Dupa\n");
+	//printf("Dupa\n");
 	while(iteration*timeStep < simLength){
 
-		printf("A\n");
+		//printf("A\n");
 		for(i = 0; i<planetCount; i++){
-			printf("B\n");
+			//printf("B\n");
 			for(j=0;j<planetCount;j++){
-				printf("C\n");
+				//printf("C\n");
 				if(i == j ){continue;}
-				printf(">");
-				printf("Liczymy dla %d i %d \n",i,j); //, &PlanetsTable[i].name, PlanetsTable[j].name);
+				//printf("Liczymy dla %d i %d \n",i,j); //, &PlanetsTable[i].name, PlanetsTable[j].name);
 				calcGrav(PlanetsTable+i, PlanetsTable+j);	
 			}
 		}

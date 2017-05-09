@@ -21,17 +21,17 @@ void actualisePos(Planet* Planet, double dt){
 }
 
 void calcGrav(Planet* A, Planet* B){
-	printf("calcGrav:1\n");
+//	printf("calcGrav:1\n");
 	double  G = 6.67408;
-	printf("calcGrav:%d %d\n", A, B);
+//	printf("calcGrav:%d %d\n", A, B);
 	double	dx = abs(A->coords->x - B->coords->x); 
 	double	dy = abs(A->coords->y - B->coords->y);
 	double	dz = abs(A->coords->z - B->coords->z);
-	printf("2\n");
+//	printf("2\n");
 	A->tmp_a->x += G * (B->mass / dx*dx);
 	A->tmp_a->y += G * (B->mass / dy*dy);
 	A->tmp_a->z += G * (B->mass / dz*dz);
-	printf("3\n");
+//	printf("3\n");
 
 
 } 

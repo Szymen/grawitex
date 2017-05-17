@@ -5,7 +5,7 @@
 
 #include "DataParser.h"
 #include "Symulator.h"
-#include "SimOuPresenter.h"
+#include "SimOutPresenter.h"
 #include "MathFunctions.h"
 #include "Collider.h"
 

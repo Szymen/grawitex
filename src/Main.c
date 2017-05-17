@@ -19,7 +19,7 @@ int main(int arc, char* argv[]){
     Planet_tab = malloc(sizeof(Planet) * PLANET_LIMIT);
     int planet_count;
     planet_count = ReadPlanetDataCartesian("data/small_data.in",Planet_tab);
-    }
+    
     char* OutFileName = "PlikWyjsciowy.out";
     Simulate( Planet_tab, planet_count, 2, 1 ,1 , OutFileName);
 

@@ -3,8 +3,9 @@
 
 #include "DataTypeObjects.h"
 
-void WriteByStep(char* OutFileName, Planet* PlanetsTable);
-void WriteCartesian(char* OutFileName, Planet* PlanetsTable);
-void WriteGnuplot(char* OutFileName, Planet* PlanetsTable);
+
+void WriteByStep(char* OutFileName, Planet* PlanetsTable, int planetCount);
+void WriteCartesian(char* OutFileName, Planet* PlanetsTable, int planetCount);
+void WriteGnuplot(char* OutFileName, Planet* PlanetsTable, int planetCount);
 
 #endif

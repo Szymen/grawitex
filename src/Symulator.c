@@ -9,6 +9,8 @@
 
 #include "Symulator.h"
 #include "MathFunctions.h"
+#include "SimOutPresenter.h"
+
 
 void Simulate(Planet* PlanetsTable, int planetCount, double simLength, double timeStep, int OutType, char* OutFileName){
 	int iteration, i, j;
@@ -23,6 +25,9 @@ void Simulate(Planet* PlanetsTable, int planetCount, double simLength, double ti
 		for(i = 0; i<planetCount; i++){
 			actualisePos(&PlanetsTable[i], timeStep);
 		}
+		/* Presentation control */
+		char* OutFileName = "test_out.out";
+		WriteByStep( OutFileName,  PlanetsTable, planetCount );
 		iteration++;
 	}
 
